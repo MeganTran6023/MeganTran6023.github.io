@@ -1,0 +1,299 @@
+/* Universal */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'botanika-mono-web', monospace;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: 100%; /* Enable vertical scrolling to show all elements despite screen size*/
+  background-image: linear-gradient(rgb(171, 129, 206), rgb(124, 33, 110), rgb(45, 11, 72));
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Ensure the background stays in place when scrolling */
+  background-position: center; /* Center the background image */
+}
+
+
+.header {
+  width: 100%;
+  height: 100vh; 
+  position: relative;
+  color: rgb(255, 213, 249);
+  align-items: center;
+  justify-content: center;
+  padding: 6% 0;
+  text-align: center;
+  z-index: 0;
+}
+
+
+
+/* Navigation bar */
+.topnav {
+  background-color: #3a1540;
+  overflow: hidden;
+  opacity: 0.9;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center vertically */
+  padding: 10px 20px; /* Adjust padding as needed */
+  z-index: 9999;
+}
+@media (max-width: 768px) {
+  .topnav {
+      flex-direction: row; /* Stack elements vertically */
+  }
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  z-index: 999;
+}
+
+.topnav a:hover {
+  background-color: #714578;
+  color: black;
+  transition: 0.27s;
+}
+
+/* Contact icons */
+.icon_me {
+  width: 50px;
+  height: auto;
+  margin: 0 35px;
+  display: inline-block;
+  padding-bottom: 20%;
+}
+
+/* Profile pic */
+.me {
+  max-width: 16%;
+  height: auto;
+  margin: 0 auto;
+  float: right;
+  vertical-align: middle;
+  margin-right: 25%;
+}
+
+@media (max-width: 768px) {
+  .me {
+      float: none;
+      margin: 0 auto 15%;
+  }
+}
+
+/* Texts on main page */
+.header h1 {
+  font-size: 65px;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 22%;
+  flex: 1;
+  padding-top: 2%;
+}
+
+.header h2 {
+  margin-top: 8%;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Fade-in text and vertical movement */
+.header h1, .header h2, img {
+  opacity: 0;
+  transform: translateY(150px);
+  animation: fadeInAndAscend 1.7s ease-in-out forwards;
+}
+
+@keyframes fadeInAndAscend {
+  0% { opacity: 0; transform: translateY(150px); }
+  50% { opacity: .7; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(20px); }
+}
+
+/* Buttons */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.box {
+  border-radius: 15px;
+  border: 5px solid #f153ff;
+  padding: 20px;
+  width: 450px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #ff72ea;
+  cursor: pointer;
+  transition: 0.17s;
+}
+
+.box-text {
+  font-size: 65px;
+  opacity: 1;
+}
+
+.box a {
+  color: rgb(255, 190, 250);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.17s;
+}
+
+.project:hover, .Artwork:hover, .Resume:hover {
+  border-color: #480d48;
+  color: rgb(130, 11, 106);
+}
+
+@media (max-width: 768px) {
+  .box-container {
+      justify-content: center;
+  }
+
+  .box {
+      width: 50%;
+  }
+}
+
+/* Animation for boxes */
+.box-container, .box {
+  opacity: 0;
+  transform: translateY(120px);
+  animation: fadeInAndAscendBox 2s ease-in-out forwards;
+}
+
+@keyframes fadeInAndAscendBox {
+  0% { opacity: 0; transform: translateY(120px); }
+  50% { opacity: .5; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(20px); }
+}
+
+/* background animation */
+
+/* position: absolute; means that an element's position is relative to its nearest positioned ancestor. */
+.wrapper {
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 0;
+pointer-events: none;
+}
+
+/* shape o ffalling balls + animation */
+.round {
+position: absolute;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #ffffff;
+border: 5px solid #ffffff;
+opacity: 0;
+box-shadow: 0 0 100px #ffffff, 0 0 10px #f8aaff, 0 0 20px #f8aaff;
+animation: animate 18s linear infinite, ani-2 2s linear infinite;
+}
+.round:nth-child(1) {
+left: 5%;
+animation-delay: 0.5s;
+}
+.round:nth-child(2) {
+left: 65%;
+animation-delay: 1s;
+}
+.round:nth-child(3) {
+left: 90%;
+animation-delay: 1.5s;
+}
+.round:nth-child(4) {
+left: 18%;
+animation-delay: 2s;
+}
+.round:nth-child(5) {
+left: 93%;
+animation-delay: 2.5s;
+}
+.round:nth-child(6) {
+left: 52%;
+animation-delay: 3s;
+}
+.round:nth-child(7) {
+left: 65%;
+animation-delay: 3.5s;
+}
+.round:nth-child(8) {
+left: 35%;
+animation-delay: 4s;
+}
+.round:nth-child(9) {
+left: 85%;
+animation-delay: 4.5s;
+}
+.round:nth-child(10) {
+left: 45%;
+animation-delay: 5s;
+}
+.round:nth-child(11) {
+left: 36%;
+animation-delay: 5.5s;
+}
+.round:nth-child(12) {
+left: 72%;
+animation-delay: 6s;
+}
+.round:nth-child(13) {
+left: 14%;
+animation-delay: 6.5s;
+}
+.round:nth-child(14) {
+left: 70%;
+animation-delay: 7s;
+}
+@keyframes animate {
+0% {
+  top: 0;
+  opacity: .3;
+}
+20% {
+  top: 20%;
+  opacity: 0.25;
+}
+40% {
+  top: 40%;
+  opacity: 0.2;
+}
+60% {
+  top: 60%;
+  opacity: 0.15;
+}
+80% {
+  top: 80%;
+  opacity: 0.1;
+}
+100% {
+  top: 100%;
+  opacity: 0;
+}
+}
+@keyframes ani-2 {
+0%, 100% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(2.5);
+}
+}

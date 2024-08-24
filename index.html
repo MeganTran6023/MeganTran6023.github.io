@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--- Responsiveness and styling -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--- Navigation bar -->
+    <div class="topnav">
+        <a href="https://github.com/MeganTran6023">
+          <img src="github.png" alt="Github" class="icon_me">
+        </a>
+        <a href="https://www.linkedin.com/in/megantran15/">
+          <img src="linkedin.png" alt="Linkedin" class="icon_me">
+        </a>
+    </div> 
+
+    <!-- Background Animation -->
+    <div class="wrapper">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+
+    <!--- Description and buttons -->
+    <div class="header">
+
+   
+        <!-- Intro info -->
+        <img class="me" src="imageMe.png" alt="">
+        <h1 class="centered">Hello, my name <br> is Megan Tran.</h1>
+        <h2 class="centered">I'm <span class='auto-type'></span>.</h2>
+        <div class="box-container">
+            <div class="box project">
+                <a href="https://github.com/MeganTran6023">
+                    <h3 class="box-text">Projects</h3>
+                </a>
+            </div>
+            <div class="box Artwork">
+                <a href="https://www.deviantart.com/sonicdaheghod6023/gallery/all"> 
+                    <h3 class="box-text">Artwork</h3>
+                </a>
+            </div>
+            <div class="box Resume">
+                <a href="./Tran_Resume.pdf" target="blank">
+                    <h3 class="box-text">Resume</h3>
+                </a>
+            </div>
+        </div>
+
+
+    <!--- Typing animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["a programmer ^3000", "a violinist ^3000", "an artist ^3000", "a Sonic the Hedgehog enthusiast ^3000"],
+        typeSpeed: 150,
+        backSpeed: 50,
+        loop: true
+      });
+    </script>
+</body>
+</html>
