@@ -135,25 +135,18 @@ body, html {
   border-radius: 15px;
   border: 5px solid #f153ff;
   padding: 20px;
-  width: 90%; /* Use a percentage to make it responsive */
-  max-width: 450px; /* Set a maximum width to prevent it from becoming too large */
+  width: 450px;
   margin: 10px;
   text-align: center;
-  line-height: 1.2; /* Adjust line height to fit text better */
+  line-height: 100px;
   background-color: #ff72ea;
   cursor: pointer;
   transition: 0.17s;
 }
 
 .box-text {
-  font-size: 100vw; /* Use viewport width units for a responsive font size */
+  font-size: 380%;
   opacity: 1;
-}
-
-@media (min-width: 768px) {
-  .box-text {
-    font-size: 350%; /* Adjust font size for larger screens */
-  }
 }
 
 .box a {
