@@ -30,8 +30,6 @@ body, html {
   z-index: 0;
 }
 
-
-
 /* Navigation bar */
 .topnav {
   background-color: #3a1540;
@@ -45,7 +43,7 @@ body, html {
 }
 @media (max-width: 768px) {
   .topnav {
-      flex-direction: row; /* Stack elements vertically */
+      flex-direction: row; /* Stack elements horizontally */
   }
 }
 
@@ -56,6 +54,7 @@ body, html {
   text-decoration: none;
   font-size: 25px;
   z-index: 999;
+  transition: .15s all ease-in-out;
 }
 
 .topnav a:hover {
@@ -75,7 +74,7 @@ body, html {
 
 /* Profile pic */
 .me {
-  max-width: 16%;
+  max-width: 15%;
   height: auto;
   margin: 0 auto;
   float: right;
@@ -87,6 +86,8 @@ body, html {
   .me {
       float: none;
       margin: 0 auto 15%;
+      max-width: 55%;
+      height: auto; /* Ensure image maintains aspect ratio  */
   }
 }
 
@@ -98,6 +99,14 @@ body, html {
   padding-left: 22%;
   flex: 1;
   padding-top: 2%;
+}
+
+@media (max-width: 768px) {
+  .header h1{
+    text-align: center;
+    padding-left: none;
+    padding-right: 16%;
+  }
 }
 
 .header h2 {
@@ -124,14 +133,81 @@ body, html {
 }
 
 /* Buttons */
-.box-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 5%;
+
+/* Buttons */
+.button {
+  background-color: #bc61d8; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 1.5% 2.5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 350%;
+  margin: 15px 10px;
+  transition-duration: 0.5s;
+  cursor: pointer;
 }
 
-.box {
+/* Button 1 */
+.button1 {
+  background-color: rgb(218, 84, 191); 
+  color: rgb(255, 213, 249); 
+  border: 5px solid #aa0486;
+  border-radius: 10px;
+  margin: 4px 2px; /* Changed margin to maintain spacing but not push down */
+}
+
+.button1:hover {
+  background-color: rgb(252, 124, 226);
+  color: rgb(255, 213, 249);
+  /* If mouse hover over button, button changes color and moves up */
+  -webkit-transform: translateY(-15%);
+  transform: translateY(-15%);
+}
+
+/* Button 2 */
+.button2 {
+  background-color: rgb(218, 84, 191); 
+  color: rgb(255, 213, 249); 
+  border: 5px solid #aa0486;
+  border-radius: 10px;
+  margin: 4px 2px; /* Changed margin to maintain spacing but not push down */
+}
+
+.button2:hover {
+  background-color: rgb(252, 124, 226);
+  color: rgb(255, 213, 249);
+  /* If mouse hover over button, button changes color and moves up */
+  -webkit-transform: translateY(-15%);
+  transform: translateY(-15%);
+}
+
+/* Button 3 */
+.button3 {
+  background-color: rgb(218, 84, 191); 
+  color: rgb(255, 213, 249); 
+  border: 5px solid #aa0486;
+  border-radius: 10px;
+  margin: 4px 2px; /* Changed margin to maintain spacing but not push down */
+}
+
+.button3:hover {
+  background-color: rgb(252, 124, 226);
+  color: rgb(255, 213, 249);
+  /* If mouse hover over button, button changes color and moves up */
+  -webkit-transform: translateY(-15%);
+  transform: translateY(-15%);
+}
+ .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  justify-content: center; /*Center horizontally*/
+  gap: 55px;
+}
+
+/* .box {
   border-radius: 15px;
   border: 5px solid #f153ff;
   padding: 20px;
@@ -159,14 +235,17 @@ body, html {
 .project:hover, .Artwork:hover, .Resume:hover {
   border-color: #480d48;
   color: rgb(130, 11, 106);
-}
+} */ */
+
 
 @media (max-width: 768px) {
   .box-container {
       justify-content: center;
+      flex-direction: column;
+      
   }
 
-  .box {
+  .btn {
       width: 50%;
   }
 }
